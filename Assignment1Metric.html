@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	   COMP 125 - Summer 2019
+	   Client-Side Web Development
+	   Joanne Filloti
+
+	   BMR Calculator - Assignment 1
+	   Estimate Web Page
+	   Author: Tiago Franco Finotti #301041366
+	   Date: May 27th 2019
+
+	   Filename: Assignment1Metric.html
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>BMR Calculator - Assignment 1</title>
+	<link rel="stylesheet" media="screen and (max-device-width: 999px)" href="Assignment1StylesMobile.css" />
+	<link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="Assignment1Styles.css" />
+	<!--[if lt IE 9]>
+	   <link rel="stylesheet" href="BMRie.css" />
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Mr+Bedfort' rel='stylesheet' type='text/css' />
+	<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>
+				<img src="images/banner.jpg" alt="BMR Calculator Banner" width="342" height="196" />BMR Calculator
+			</h1>
+		</header>
+		<nav>
+			<ul>
+                <li><a href="../index.html">Home Page</a></li>
+				<li><a href="Assignment1.html">Imperial BMR Calculator</a></li>
+				<li id="currentpage"><a href="#">Metric BMR Calculator</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<h2>Metric BMR Calculator</h2>
+			<p>The Harris–Benedict equation (also called the Harris-Benedict principle) is a method used to estimate an individual's basal metabolic rate (BMR).
+				The estimated BMR value may be multiplied by a number that corresponds to the individual's activity level; the resulting number is the approximate daily kilocalorie intake to maintain current body weight.
+				The Harris–Benedict equation may be used to assist weight loss — by reducing kilocalorie intake number below the estimated maintenance intake of the equation.
+			</p>
+			<form id="estimateform">
+				<fieldset>
+					<legend><span>Personal</span></legend>
+					<input type="number" min="15" max="80" id="age" tabindex="1" />
+					<label for="age">
+						<p>Age</p>
+						<p>15 - 80</p>
+					</label>
+					<input type="number" min="0" id="weight" tabindex="3" />
+					<label for="weight">
+						<p>Weight - kg</p>
+					</label>
+					<input type="number" min="0" id="heightM" tabindex="5" />
+					<label for="heightM">
+						<p>Height - m</p>
+					</label>
+					<input type="number" min="0" max="99" id="heightCM" tabindex="7" />
+					<label for="heightCM">
+						<p>cm</p>
+					</label>
+					<select name="gender" id="gender" tabindex="9">
+						<option value="1">Male
+						</option>
+						<option value="2">Female
+						</option>
+					</select>
+					<label for="gender">
+						<p>Gender</p>
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend><span>Activity</span></legend>
+					<select name="activity" id="activity" tabindex="11">
+						<option value="1">Sedentary or light activity
+						</option>
+						<option value="2">Active or moderately active
+						</option>
+						<option value="3">Vigoursly active
+						</option>
+					</select>
+					<label for="activity">
+						<p>Physical Activity Level</p>
+					</label>
+				</fieldset>
+			</form>
+		</article>
+		<aside>
+			<p>BMR =  <span id="estimate"></span></p>
+		</aside>
+		<footer>
+			<p>&nbsp; &copy; Copyright Tiago Franco Finotti &bull; COMP 125 - Summer 2019</p>
+		</footer>
+	</div>
+	<script src="Assignment1Metric.js"></script>
+</body>
+</html>
